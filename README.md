@@ -1,28 +1,29 @@
-# rclone
+---
+title: "OpenStack Swift"
+description: "Rclone docs for OpenStack Swift"
+---
 
-Rclone is a command-line program to sync files and directories to and from various cloud storage providers.
+# OpenStack Swift
 
-## Install
+Paths are specified as `remote:container` (or `remote:` for the list of containers).
 
-See [https://rclone.org/install/](https://rclone.org/install/) for installation instructions.
+## Configuration
 
-## Usage
+Here is an example of configuring an OpenStack Swift remote.
 
-Run `rclone config` to set up your remote storage, then use commands like:
+First run:
 
-```
-rclone ls remote:path
-rclone copy /local/path remote:path
-```
+    rclone config
 
-## Documentation
+This will guide you through an interactive setup process.
 
-Full documentation is available at [https://rclone.org](https://rclone.org).
+### Options
 
-## Support
+- `user`: User name for authentication.
+- `key`: API key or password.
+- `auth`: Authentication URL for your service.
+- `tenant`: Tenant name (v1 auth / v2 auth).
+- `domain`: Domain name for Identity v3 API.
+- `region`: Region name (optional).
 
-For questions and support, visit the [forum](https://forum.rclone.org).
-
-## Contributing
-
-We welcome contributions. Please read the [contributing guide](https://rclone.org/contributing/) to get started.
+For more details on connecting to Swift object storage, refer to your provider's API credentials guide.
